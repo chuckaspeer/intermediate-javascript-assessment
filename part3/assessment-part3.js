@@ -13,7 +13,10 @@
 // return the result of your updateAnimal invocation
 
 // CODE HERE...
-
+let callBinding = (magicAnimals, updateAnimal, id)=>{
+return updateAnimal(magicAnimals.filter=(x=>{return x.id ==id})[0], "Trogdor");
+}
+updateAnimal();
 
 
 // *************

@@ -44,6 +44,14 @@ function noWeakLink() {
     url: '/api/users'
   })
   // CODE HERE...
+.then(function(resOb1){
+  firstUser=resOb1.data[0];
+  return resOb1;
+}).then(function(resOb2){
+  thirdUser=resOb2.data[2];
+  return resOb2.data[9];
+})
+
 
 }
 
@@ -75,6 +83,11 @@ function large() {
 }
 // CODE HERE...
 
+var boundToElephant = large.bind(elephant);
+boundToElephant();
+
+
+
 
 
 // *************
@@ -88,7 +101,9 @@ function large() {
 // and return the bound function.
 
 // CODE HERE...
-
+deathStar = (capacity, crew)=>{
+  return capacity.bind(crew);
+}
 
 
 // *************
@@ -104,6 +119,11 @@ function large() {
 
 // CODE HERE...
 
+accountingOffice=(assests)=>{
+return function(liabilities){
+return assests + liabilities;
+}
+}
 
 
 // *************
